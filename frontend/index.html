@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgendaYA - Agenda del administrador</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="periodo" id="calendar-title" data-cy="calendar-title"></h1>
+        <div class="nav">
+          <button type="button" class="nav-btn" data-action="nav-prev" data-cy="nav-prev" aria-label="Período anterior">&#8249;</button>
+          <button type="button" class="nav-btn nav-hoy" data-action="nav-today" data-cy="nav-today">Hoy</button>
+          <button type="button" class="nav-btn" data-action="nav-next" data-cy="nav-next" aria-label="Período siguiente">&#8250;</button>
+        </div>
+      </div>
+      <div class="toggle" role="group" aria-label="Vista del calendario">
+        <button type="button" id="btn-view-week" class="toggle-btn" data-action="view-week" data-cy="view-week">Semana</button>
+        <button type="button" id="btn-view-month" class="toggle-btn" data-action="view-month" data-cy="view-month">Mes</button>
+      </div>
+    </header>
+
+    <div id="banner-slot" class="banner-slot"></div>
+
+    <main class="layout">
+      <section class="calendar-area" aria-label="Calendario de reservas">
+        <div id="empty-slot"></div>
+        <div id="calendar" class="calendar-scroll" data-cy="calendar"></div>
+      </section>
+      <aside id="detail" class="detail" data-cy="detail-panel" aria-label="Detalle de la reserva"></aside>
+    </main>
+
+    <footer class="sim" aria-label="Herramientas de prueba">
+      <span class="sim-title">Herramientas de prueba</span>
+      <label class="sim-check">
+        <input type="checkbox" id="sim-mail-failure" data-cy="sim-mail-failure" />
+        Simular falla del servicio de correo
+      </label>
+      <button type="button" class="sim-btn" data-action="reset-data" data-cy="reset-data">Reiniciar datos de ejemplo</button>
+    </footer>
+  </div>
+
+  <div id="modal-root"></div>
+
+  <script src="../src/logica-negocio.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

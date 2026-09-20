@@ -1,0 +1,17 @@
+{
+  "name": "agendaya-tp6",
+  "version": "1.0.0",
+  "description": "AgendaYA - TP6 Testing Automatizado (Grupo 10, Módulo 5: Gestión de Agenda)",
+  "private": true,
+  "scripts": {
+    "start": "http-server . -p 3000 -c-1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "cypress": "latest",
+    "http-server": "latest",
+    "jest": "latest"
+  }
+}
