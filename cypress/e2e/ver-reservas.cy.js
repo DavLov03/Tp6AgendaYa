@@ -20,7 +20,7 @@ describe('AgendaYA - M05 Gestión de Agenda - Ver reservas del día', () => {
   })
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // ---------------------------------------------------------------------------
   it('E2E-01: en vista semana (por defecto) al seleccionar una reserva se muestra su detalle completo', () => {
     // Arrange: el calendario abre en vista semana, en la semana actual y sin ninguna reserva seleccionada
@@ -44,7 +44,7 @@ describe('AgendaYA - M05 Gestión de Agenda - Ver reservas del día', () => {
   })
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // ---------------------------------------------------------------------------
   it('E2E-02: en vista mes el día se abre en "Reservas del día" y desde ahí se accede al detalle de una reserva', () => {
     // Arrange: se cambia a la vista mes; el miércoles 13 tiene 4 reservas
@@ -73,7 +73,7 @@ describe('AgendaYA - M05 Gestión de Agenda - Ver reservas del día', () => {
   })
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // ---------------------------------------------------------------------------
   it('E2E-03: un período sin reservas muestra el calendario vacío con mensaje informativo y "Hoy" vuelve a la semana con reservas', () => {
     // Arrange: la semana actual tiene reservas, por lo que no hay mensaje de período vacío
