@@ -28,7 +28,7 @@ function reserva(parcial = {}) {
 
 describe('AgendaYA - M05 Gestión de Agenda - lógica de negocio', () => {
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // Ordenamiento por fecha (M05). Casos: normal, descendente, borde e inválido.
   // ---------------------------------------------------------------------------
   describe('ordenarReservasPorFecha', () => {
@@ -93,7 +93,7 @@ describe('AgendaYA - M05 Gestión de Agenda - lógica de negocio', () => {
   });
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // Filtrado por estado (M05). Casos: normal, sin coincidencias e inválido.
   // ---------------------------------------------------------------------------
   describe('filtrarReservasPorEstado', () => {
@@ -140,7 +140,7 @@ describe('AgendaYA - M05 Gestión de Agenda - lógica de negocio', () => {
   });
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // Ver reservas del día y del período (M05-R01F).
   // ---------------------------------------------------------------------------
   describe('obtenerReservasDelDia y obtenerReservasDelPeriodo', () => {
@@ -181,7 +181,7 @@ describe('AgendaYA - M05 Gestión de Agenda - lógica de negocio', () => {
   });
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // Cancelar una reserva (M05-R02F). Solo Confirmada o Reagendada.
   // ---------------------------------------------------------------------------
   describe('cancelarReserva', () => {
@@ -260,7 +260,7 @@ describe('AgendaYA - M05 Gestión de Agenda - lógica de negocio', () => {
   });
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // Fechas del calendario (M05-R01F): formatos inválidos y bordes de semana/mes.
   // ---------------------------------------------------------------------------
   describe('fechas y calendario', () => {
@@ -374,7 +374,7 @@ describe('AgendaYA - M05 Gestión de Agenda - lógica de negocio', () => {
   });
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // Duración de la franja horaria usada para dibujar cada reserva.
   // ---------------------------------------------------------------------------
   describe('duracionEnMinutos', () => {
