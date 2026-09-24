@@ -19,7 +19,7 @@ describe('AgendaYA - M05 Gestión de Agenda - Cancelar una reserva', () => {
   })
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // ---------------------------------------------------------------------------
   it('E2E-04: cancelar una reserva Confirmada la pasa a "Cancelada" y muestra el aviso de éxito', () => {
     // Arrange: se selecciona la reserva de Claudia Morales (Confirmada) y su detalle habilita la cancelación
@@ -47,7 +47,7 @@ describe('AgendaYA - M05 Gestión de Agenda - Cancelar una reserva', () => {
   })
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // ---------------------------------------------------------------------------
   it('E2E-05: si falla el servicio de correo la reserva se cancela igual y se advierte con un error específico', () => {
     // Arrange: se activa la simulación de falla del servicio de correo (M06) y se elige una reserva Confirmada
@@ -71,7 +71,7 @@ describe('AgendaYA - M05 Gestión de Agenda - Cancelar una reserva', () => {
   })
 
   // ---------------------------------------------------------------------------
-  // Integrante: ____________________
+  // 
   // ---------------------------------------------------------------------------
   it('E2E-06: una reserva Pendiente o ya Cancelada no se puede cancelar', () => {
     // Arrange: se selecciona una reserva Pendiente (Ana Martínez)
