@@ -56,7 +56,7 @@ npm test          # Tests unitarios con Jest
 | E2E-05 | `cypress/e2e/cancelar-reserva.cy.js` | Cancelar una reserva (M05-R02F) | Error de sistema: falla el servicio de correo |
 | E2E-06 | `cypress/e2e/cancelar-reserva.cy.js` | Cancelar una reserva (M05-R02F) | Error por estado: reserva Pendiente o ya Cancelada |
 
-Cada test tiene arriba un comentario `Integrante:` para completar con quién lo desarrolló.
+
 Para correr un solo archivo: `npx cypress run --spec cypress/e2e/cancelar-reserva.cy.js`.
 
 ## Estructura del repositorio
