@@ -220,6 +220,28 @@ describe('AgendaYA - M05 Gestión de Agenda - lógica de negocio', () => {
       expect(L.puedeCancelarse(reservas[0])).toBe(true);
     });
 
+    it('[INC-0502] reproduce incidente: debe permitir cancelar una reserva en estado Reagendada y liberar la franja horaria', () => {
+      // Arrange: reserva que fue previamente reagendada (M05-R02F)
+      const reservas = [
+        reserva({
+          id: 'inc-reagendada-01',
+          invitado: 'Carlos Gómez',
+          estado: L.ESTADOS.REAGENDADA,
+          fecha: '2026-05-15',
+          horaInicio: '14:00',
+          horaFin: '15:00',
+        }),
+      ];
+
+      // Act: intentar cancelar la reserva reagendada
+      const resultado = L.cancelarReserva(reservas, 'inc-reagendada-01');
+
+      // Assert: verificar estado Cancelada y que la franja horaria queda libre
+      expect(resultado.reserva.estado).toBe(L.ESTADOS.CANCELADA);
+      expect(L.ocupaFranja(resultado.reserva)).toBe(false);
+      expect(resultado.reservas[0].estado).toBe(L.ESTADOS.CANCELADA);
+    });
+
     it('rechaza cancelar una reserva Pendiente', () => {
       // Arrange
       const reservas = [reserva({ id: 'res-06', estado: L.ESTADOS.PENDIENTE })];
