@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "cy": "readonly",
+    "Cypress": "readonly",
+    "AgendaLogica": "readonly"
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": "off"
+  }
+}

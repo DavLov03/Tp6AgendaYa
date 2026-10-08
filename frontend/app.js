@@ -32,29 +32,154 @@
   // dia: 0 = lunes ... 6 = domingo
   // ---------------------------------------------------------------------------
   const PLANTILLA_SEMANAL = [
-    { dia: 1, ini: '09:00', fin: '10:00', invitado: 'Laura Pérez', tipo: 'Reunión equipo', modalidad: 'Presencial', ubicacion: 'Oficina 302', estado: ESTADOS.CONFIRMADA },
-    { dia: 1, ini: '10:00', fin: '11:30', invitado: 'María González', tipo: 'Reunión de negocios', modalidad: 'Presencial', ubicacion: 'Oficina 302', estado: ESTADOS.CONFIRMADA },
-    { dia: 1, ini: '11:30', fin: '12:30', invitado: 'Miguel Sánchez', tipo: 'Revisión técnica', modalidad: 'Virtual', ubicacion: 'Google Meet', estado: ESTADOS.PENDIENTE },
-    { dia: 1, ini: '14:00', fin: '15:00', invitado: 'Carlos Rodríguez', tipo: 'Entrevista', modalidad: 'Presencial', ubicacion: 'Oficina 302', estado: ESTADOS.CONFIRMADA },
-    { dia: 1, ini: '16:00', fin: '17:00', invitado: 'Lucía Fernández', tipo: 'Seguimiento de cuenta', modalidad: 'Virtual', ubicacion: 'Zoom', estado: ESTADOS.REAGENDADA },
-    { dia: 2, ini: '09:00', fin: '10:30', invitado: 'Ana Martínez', tipo: 'Consultoría', modalidad: 'Presencial', ubicacion: 'Oficina 302', estado: ESTADOS.PENDIENTE },
-    { dia: 2, ini: '11:00', fin: '12:00', invitado: 'Claudia Morales', tipo: 'Entrevista candidato', modalidad: 'Virtual', ubicacion: 'Google Meet', estado: ESTADOS.CONFIRMADA },
-    { dia: 2, ini: '14:00', fin: '16:00', invitado: 'Fernando Castro', tipo: 'Workshop', modalidad: 'Presencial', ubicacion: 'Sala de capacitación', estado: ESTADOS.CONFIRMADA },
-    { dia: 2, ini: '16:30', fin: '17:30', invitado: 'Diego Herrera', tipo: 'Reunión comercial', modalidad: 'Virtual', ubicacion: 'Zoom', estado: ESTADOS.CONFIRMADA },
-    { dia: 3, ini: '11:00', fin: '12:00', invitado: 'Patricia López', tipo: 'Revisión de proyecto', modalidad: 'Presencial', ubicacion: 'Oficina 302', estado: ESTADOS.CONFIRMADA },
-    { dia: 4, ini: '10:00', fin: '12:00', invitado: 'Jorge Ramírez', tipo: 'Capacitación', modalidad: 'Presencial', ubicacion: 'Sala de capacitación', estado: ESTADOS.CONFIRMADA },
-    { dia: 4, ini: '15:00', fin: '16:00', invitado: 'Sandra Torres', tipo: 'Reunión seguimiento', modalidad: 'Virtual', ubicacion: 'Zoom', estado: ESTADOS.CANCELADA },
-    { dia: 5, ini: '13:00', fin: '14:30', invitado: 'Roberto Díaz', tipo: 'Presentación de proyecto', modalidad: 'Presencial', ubicacion: 'Oficina 302', estado: ESTADOS.CONFIRMADA },
+    {
+      dia: 1,
+      ini: '09:00',
+      fin: '10:00',
+      invitado: 'Laura Pérez',
+      tipo: 'Reunión equipo',
+      modalidad: 'Presencial',
+      ubicacion: 'Oficina 302',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 1,
+      ini: '10:00',
+      fin: '11:30',
+      invitado: 'María González',
+      tipo: 'Reunión de negocios',
+      modalidad: 'Presencial',
+      ubicacion: 'Oficina 302',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 1,
+      ini: '11:30',
+      fin: '12:30',
+      invitado: 'Miguel Sánchez',
+      tipo: 'Revisión técnica',
+      modalidad: 'Virtual',
+      ubicacion: 'Google Meet',
+      estado: ESTADOS.PENDIENTE,
+    },
+    {
+      dia: 1,
+      ini: '14:00',
+      fin: '15:00',
+      invitado: 'Carlos Rodríguez',
+      tipo: 'Entrevista',
+      modalidad: 'Presencial',
+      ubicacion: 'Oficina 302',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 1,
+      ini: '16:00',
+      fin: '17:00',
+      invitado: 'Lucía Fernández',
+      tipo: 'Seguimiento de cuenta',
+      modalidad: 'Virtual',
+      ubicacion: 'Zoom',
+      estado: ESTADOS.REAGENDADA,
+    },
+    {
+      dia: 2,
+      ini: '09:00',
+      fin: '10:30',
+      invitado: 'Ana Martínez',
+      tipo: 'Consultoría',
+      modalidad: 'Presencial',
+      ubicacion: 'Oficina 302',
+      estado: ESTADOS.PENDIENTE,
+    },
+    {
+      dia: 2,
+      ini: '11:00',
+      fin: '12:00',
+      invitado: 'Claudia Morales',
+      tipo: 'Entrevista candidato',
+      modalidad: 'Virtual',
+      ubicacion: 'Google Meet',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 2,
+      ini: '14:00',
+      fin: '16:00',
+      invitado: 'Fernando Castro',
+      tipo: 'Workshop',
+      modalidad: 'Presencial',
+      ubicacion: 'Sala de capacitación',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 2,
+      ini: '16:30',
+      fin: '17:30',
+      invitado: 'Diego Herrera',
+      tipo: 'Reunión comercial',
+      modalidad: 'Virtual',
+      ubicacion: 'Zoom',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 3,
+      ini: '11:00',
+      fin: '12:00',
+      invitado: 'Patricia López',
+      tipo: 'Revisión de proyecto',
+      modalidad: 'Presencial',
+      ubicacion: 'Oficina 302',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 4,
+      ini: '10:00',
+      fin: '12:00',
+      invitado: 'Jorge Ramírez',
+      tipo: 'Capacitación',
+      modalidad: 'Presencial',
+      ubicacion: 'Sala de capacitación',
+      estado: ESTADOS.CONFIRMADA,
+    },
+    {
+      dia: 4,
+      ini: '15:00',
+      fin: '16:00',
+      invitado: 'Sandra Torres',
+      tipo: 'Reunión seguimiento',
+      modalidad: 'Virtual',
+      ubicacion: 'Zoom',
+      estado: ESTADOS.CANCELADA,
+    },
+    {
+      dia: 5,
+      ini: '13:00',
+      fin: '14:30',
+      invitado: 'Roberto Díaz',
+      tipo: 'Presentación de proyecto',
+      modalidad: 'Presencial',
+      ubicacion: 'Oficina 302',
+      estado: ESTADOS.CONFIRMADA,
+    },
   ];
 
   /** IDs resultantes: res-anterior-01, res-actual-01, res-siguiente-01 ... (estables, para usarlos en los tests). */
   function generarReservasDemo(hoy) {
     const lunes = L.inicioDeSemana(hoy);
-    const semanas = [['anterior', -1], ['actual', 0], ['siguiente', 1]];
+    const semanas = [
+      ['anterior', -1],
+      ['actual', 0],
+      ['siguiente', 1],
+    ];
     const reservas = [];
     semanas.forEach(([etiqueta, desplazamiento]) => {
       PLANTILLA_SEMANAL.forEach((t, i) => {
-        const fecha = new Date(lunes.getFullYear(), lunes.getMonth(), lunes.getDate() + desplazamiento * 7 + t.dia);
+        const fecha = new Date(
+          lunes.getFullYear(),
+          lunes.getMonth(),
+          lunes.getDate() + desplazamiento * 7 + t.dia
+        );
         reservas.push({
           id: `res-${etiqueta}-${String(i + 1).padStart(2, '0')}`,
           invitado: t.invitado,
@@ -106,7 +231,10 @@
   // ---------------------------------------------------------------------------
   function renderEncabezado() {
     $('calendar-title').textContent = L.tituloPeriodo(estado.vista, estado.fechaRef);
-    [['btn-view-week', 'semana'], ['btn-view-month', 'mes']].forEach(([id, vista]) => {
+    [
+      ['btn-view-week', 'semana'],
+      ['btn-view-month', 'mes'],
+    ].forEach(([id, vista]) => {
       const activo = estado.vista === vista;
       $(id).classList.toggle('is-active', activo);
       $(id).setAttribute('aria-pressed', String(activo));
@@ -341,7 +469,10 @@
 
   /** Re-renderiza todo y cuida el foco (para poder operar con teclado). */
   function render() {
-    const focoPrevio = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.cy : null;
+    const focoPrevio =
+      document.activeElement && document.activeElement.dataset
+        ? document.activeElement.dataset.cy
+        : null;
     const habiaDialogo = Boolean($('modal-root').querySelector('[data-cy="cancel-dialog"]'));
     const habiaModalDia = Boolean($('modal-root').querySelector('[data-cy="day-modal"]'));
 
@@ -383,32 +514,61 @@
             texto: `La reserva de ${reserva.invitado} fue cancelada. El horario quedó libre y se notificó al invitado y al administrador.`,
           };
     } catch (err) {
-      estado.aviso = { tipo: 'error', cy: 'cancel-error-message', texto: `No se pudo cancelar la reserva: ${err.message}` };
+      estado.aviso = {
+        tipo: 'error',
+        cy: 'cancel-error-message',
+        texto: `No se pudo cancelar la reserva: ${err.message}`,
+      };
     }
   }
 
   const ACCIONES = {
-    'nav-prev': () => { estado.fechaRef = L.moverPeriodo(estado.vista, estado.fechaRef, -1); },
-    'nav-next': () => { estado.fechaRef = L.moverPeriodo(estado.vista, estado.fechaRef, 1); },
-    'nav-today': () => { estado.fechaRef = new Date(); },
-    'view-week': () => { estado.vista = 'semana'; },
-    'view-month': () => { estado.vista = 'mes'; },
+    'nav-prev': () => {
+      estado.fechaRef = L.moverPeriodo(estado.vista, estado.fechaRef, -1);
+    },
+    'nav-next': () => {
+      estado.fechaRef = L.moverPeriodo(estado.vista, estado.fechaRef, 1);
+    },
+    'nav-today': () => {
+      estado.fechaRef = new Date();
+    },
+    'view-week': () => {
+      estado.vista = 'semana';
+    },
+    'view-month': () => {
+      estado.vista = 'mes';
+    },
     'select-booking': (el) => {
       estado.seleccionadaId = el.dataset.id;
       estado.diaModal = null;
       estado.aviso = null;
     },
-    'close-detail': () => { estado.seleccionadaId = null; },
-    'open-day': (el) => { estado.diaModal = el.dataset.fecha; },
-    'close-day': () => { estado.diaModal = null; },
-    'overlay-day': () => { estado.diaModal = null; },
-    'ask-cancel': () => {
-      if (L.puedeCancelarse(buscarReserva(estado.seleccionadaId))) estado.cancelId = estado.seleccionadaId;
+    'close-detail': () => {
+      estado.seleccionadaId = null;
     },
-    'abort-cancel': () => { estado.cancelId = null; },
-    'overlay-cancel': () => { estado.cancelId = null; },
+    'open-day': (el) => {
+      estado.diaModal = el.dataset.fecha;
+    },
+    'close-day': () => {
+      estado.diaModal = null;
+    },
+    'overlay-day': () => {
+      estado.diaModal = null;
+    },
+    'ask-cancel': () => {
+      if (L.puedeCancelarse(buscarReserva(estado.seleccionadaId)))
+        estado.cancelId = estado.seleccionadaId;
+    },
+    'abort-cancel': () => {
+      estado.cancelId = null;
+    },
+    'overlay-cancel': () => {
+      estado.cancelId = null;
+    },
     'confirm-cancel': confirmarCancelacion,
-    'close-banner': () => { estado.aviso = null; },
+    'close-banner': () => {
+      estado.aviso = null;
+    },
     'reset-data': () => {
       estado.vista = 'semana';
       estado.fechaRef = new Date();

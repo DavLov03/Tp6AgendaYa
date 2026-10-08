@@ -28,8 +28,18 @@
   const ESTADOS_CANCELABLES = Object.freeze([ESTADOS.CONFIRMADA, ESTADOS.REAGENDADA]);
 
   const MESES = [
-    'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
   ];
   const DIAS_SEMANA = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
@@ -186,13 +196,19 @@
   /** Reservas de un día puntual, ordenadas por hora de inicio. */
   function obtenerReservasDelDia(reservas, fecha) {
     validarLista(reservas);
-    return ordenarReservasPorFecha(reservas.filter((r) => r.fecha === fecha), 'asc');
+    return ordenarReservasPorFecha(
+      reservas.filter((r) => r.fecha === fecha),
+      'asc'
+    );
   }
 
   /** Reservas entre dos fechas (ambas inclusive), ordenadas. */
   function obtenerReservasDelPeriodo(reservas, desde, hasta) {
     validarLista(reservas);
-    return ordenarReservasPorFecha(reservas.filter((r) => r.fecha >= desde && r.fecha <= hasta), 'asc');
+    return ordenarReservasPorFecha(
+      reservas.filter((r) => r.fecha >= desde && r.fecha <= hasta),
+      'asc'
+    );
   }
 
   /** Una reserva ocupa su franja horaria mientras no esté cancelada. */

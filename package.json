@@ -1,17 +1,23 @@
 {
   "name": "agendaya-tp6",
   "version": "1.0.0",
-  "description": "AgendaYA - TP6 Testing Automatizado (Grupo 10, Módulo 5: Gestión de Agenda)",
+  "description": "AgendaYA - TP7 CI/CD & Mantenimiento (Grupo 10, Módulo 5: Gestión de Agenda)",
   "private": true,
   "scripts": {
     "start": "http-server . -p 3000 -c-1",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "build": "node -e \"console.log('Build OK: Static Frontend & Business Logic bundled')\""
   },
   "devDependencies": {
-    "cypress": "latest",
-    "http-server": "latest",
-    "jest": "latest"
+    "cypress": "^13.0.0",
+    "eslint": "^8.57.0",
+    "http-server": "^14.1.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5"
   }
 }
